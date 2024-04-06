@@ -40,6 +40,15 @@ namespace HangmanProject
         {
             return roundPoints;
         }
+
+        /// <summary>
+        /// Method to play a round of the game
+        /// It will display the word to guess and ask the player to guess a letter
+        /// If the player guesses the word, the round ends
+        /// If the player runs out of lives, the round ends
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="game"></param>
         public void playRound(Player player, Game game){
             beginRound = true;
             string playerName = player.GetName();
@@ -65,6 +74,14 @@ namespace HangmanProject
             }
         }
 
+        /// <summary>
+        /// Method to determine if the player won or lost the round
+        /// If the player guessed the word, they win the round
+        /// If the player ran out of lives, they lose the round
+        /// The round ends after the player wins or loses
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="game"></param>
         public void isWin(Player player, Game game){
             if(game.GetWordGuessed()){
                 Console.WriteLine("The word was: " + game.GetWord());

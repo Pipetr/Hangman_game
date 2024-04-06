@@ -100,7 +100,7 @@ namespace HangmanProject
         /// <summary>
         /// Initializes a new instance of the <see cref="Game"/> class.
         /// Initializes the game with a list of words, chooses a random word from a pre-defined the list, and initializes the guess with dashes.
-        /// the number of lives to 6, and sets the game over and word guessed flags to false.
+        /// and sets the game over and word guessed flags to false.
         /// </summary>
         public Game(Player[] players)
         {
@@ -111,6 +111,9 @@ namespace HangmanProject
             rounds = 0;
         }
 
+        /// <summary>
+        /// Chooses a random word from the list of words and initializes the guess with dashes.
+        /// </summary>
         public void randomWord()
         {
             Random random = new Random();
@@ -119,6 +122,7 @@ namespace HangmanProject
         }
 
         // Check if the guess is correct
+
         /// <summary>
         /// Checks if the guessed letter is correct and updates the guess accordingly.
         /// If the guessed letter is correct, the guess is updated with the letter in the correct position.
@@ -149,6 +153,14 @@ namespace HangmanProject
             return isCorrect;
         }
 
+        /// <summary>
+        /// Initializes a new object Player empty.
+        /// Compares the scores of the players and determines the winner.
+        /// </summary>
+        /// <returns>
+        /// The player with the highest score.
+        /// If there is a tie, returns an empty player.
+        /// </returns>
         public Player GetWinner()
         {
             // Determine the winner based on the highest score, if there is a tie, there is no winner
@@ -175,7 +187,13 @@ namespace HangmanProject
             return winner;
         }
 
-       
+       /// <summary>
+       /// Checks if the full word guessed is correct and updates the word guessed flag.
+       /// </summary>
+       /// <param name="fullWord"> Type string</param>
+       /// <returns>
+       /// Returns true if the full word guessed is correct, otherwise returns false.
+       /// </returns>
 
         public bool fullWordGuess(string fullWord)
         {
@@ -188,6 +206,7 @@ namespace HangmanProject
         }
 
         // Draw the hangman depending on the number of lives
+        
         /// <summary>
         /// Draws the hangman based on the number of lives remaining.
         /// </summary>
