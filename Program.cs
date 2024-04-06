@@ -27,7 +27,6 @@ namespace HangmanProject
                 int numRounds = Utilities.getNumberOfRounds(); 
                 Round round = new Round(numRounds); // create a new round object
                 Game game = new Game(players); // create a new game object
-                Console.WriteLine("word selected: " + game.GetWord()); // TODO remove this line
                 int currentPlayerTurn = 0; // set the current player turn to 0, control variable
                 for (int i = 0; i < numRounds; i++)
                 {

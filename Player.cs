@@ -88,6 +88,7 @@ namespace HangmanProject
             this.isRoundWinner = isRoundWinner;
         }
         // Constructor
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="Player"/> class.
         /// The player has a name, if not specified, the name is an empty string.
