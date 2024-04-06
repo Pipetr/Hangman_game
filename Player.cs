@@ -122,13 +122,8 @@ namespace HangmanProject
             lives = 6;
         }
 
-        // Helper method
-        /*
-        * Validates that the number of games played is equal to the sum of games won and games lost.
-        If the number of games played is equal to the sum of games won and games lost, the method returns true.
-        */
-
         // Define the methods of the player
+        
         /// <summary>
         /// Updates the player's score by adding the specified score.
         /// Parameters:
